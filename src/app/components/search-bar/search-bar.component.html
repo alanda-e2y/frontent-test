@@ -1,0 +1,13 @@
+<div id="searchBoxContainer" fxLayout="row" fxLayoutAlign="center none">
+    <input 
+        id="searchBox" 
+        type="search" 
+        (change)="searchTermChange($event)" 
+        (search)="doSearchEmpty()"
+        fxFlex.lg="50"
+        fxFlex.md="75" 
+        fxFlex.sm="75" 
+        fxFlex.xs="100" 
+        placeholder="Search for 🍺..."/>
+    <button id="searchButton" (click)="doSearch()">🔍</button>
+</div>

@@ -1,1 +1,9 @@
-<p>beers: {{ beers$ | async | json }}</p>
+<h1 fxLayout="row" fxLayoutAlign="center none">🍻 BeerFinder </h1>
+
+<app-search-bar 
+    (beers)="setBeers($event)">
+</app-search-bar>
+
+<app-beer-list 
+    [beerList]="beers">
+</app-beer-list>

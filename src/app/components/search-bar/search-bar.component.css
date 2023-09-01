@@ -1,0 +1,26 @@
+#searchBoxContainer{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+#searchBox{
+    padding: 10px 45px;
+    padding-right: 45px;
+    padding-left: 20px;
+    border-radius: 50px;
+    border: solid 1px #ccc;
+    color: #333;
+}
+
+#searchButton {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-left: solid 1px #eee;
+    position: relative;
+    left: -45px;
+    padding: 0px 10px;
+}
+
+#searchBox:focus{
+    outline: none;
+}

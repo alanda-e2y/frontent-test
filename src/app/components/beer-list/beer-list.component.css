@@ -1,0 +1,13 @@
+div[id^="beer-"] {
+    width: 100%;
+    overflow: hidden;
+}
+div[id^="beer-"] img{
+    max-height: 400px;
+}
+div[id^="beer-"] .infoContainer{
+    padding: 40px 20px; 
+    background-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    top: -100px;
+}
