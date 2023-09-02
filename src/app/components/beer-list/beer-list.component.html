@@ -1,21 +1,36 @@
-<div fxLayout="row wrap" fxLayoutAlign="center none">
+<div 
+    fxLayout="row wrap" 
+    fxLayoutAlign="center none" 
+    fxFlex.xl="75"
+    fxFlex.lg="75"
+    fxFlex.md="75" 
+    fxFlex.sm="75" 
+    fxFlex.xs="100"
+    fxLayoutGap.xl="20px grid"
+    fxLayoutGap.lg="10px grid"
+    fxLayoutGap.md="10px grid"
+    fxLayoutGap.sm="20px grid"
+    fxLayoutGap.xs="0px grid"
+>
     <div 
         id="beer-{{beer.id}}" 
         *ngFor="let beer of beerList" 
         fxLayout="column" 
-        fxFlex.lt-xl="20" 
-        fxFlex.xl="20" 
-        fxFlex.lg="25" 
+        fxFlex.xl="25" 
+        fxFlex.lg="33" 
         fxFlex.md="33" 
         fxFlex.sm="50" 
         fxFlex.xs="100"
+        style="background-image: url({{beer.image_url}});"
     >
-        <div class="imgContainer" fxLayoutAlign="center none" fxFlex="100">
-            <img src="{{beer.image_url}}" alt="{{ beer.name }}"/>
-        </div>
-        <div fxLayoutAlign="center none" fxLayout="column" fxFlex="100" class="infoContainer">
+        <div fxLayoutAlign="center none" fxLayout="column" class="infoContainer">
             <h3 fxFlex="100" fxLayoutAlign="center none"> {{ beer.name }}</h3>
-            <div fxFlex="100" fxLayoutAlign="center none"> Alcohol %: {{ beer.attenuation_level }}</div>
+            <div class="percentageBar" 
+                style="--percent:{{beer.attenuation_level}}"
+            >
+                &nbsp;
+            </div>
+            <span fxFlex="100"  fxLayoutAlign="center none"> Alcohol: {{beer.attenuation_level}}% </span>
         </div>
     </div>
     <div *ngIf="beerList.length == 0" fxLayout="row" fxLayoutAlign="center none">

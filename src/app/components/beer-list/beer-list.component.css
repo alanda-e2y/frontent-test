@@ -1,13 +1,39 @@
 div[id^="beer-"] {
-    width: 100%;
-    overflow: hidden;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: solid 2px red; */
+    height: 300px;
+    margin: 10px 0px;
+    justify-content: flex-end;
+    padding-bottom: 0px !important;
 }
-div[id^="beer-"] img{
-    max-height: 400px;
+
+div[id^="beer-"] .infoContainer {
+    color: aliceblue;
+    padding: 0px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    max-height: 100px;
 }
-div[id^="beer-"] .infoContainer{
-    padding: 40px 20px; 
-    background-color: rgba(255, 255, 255, 0.7);
+
+.percentageBar {
+    border: solid 1px #ccc;
+    border-radius: 50px;
+}
+
+.percentageBar::before {
+    border-radius: 50px;
+    content: '';
+    display: flex;
+    justify-content: end;
+    width: calc(var(--percent) * 1%);
+    height: 100%;
+    background: rgba(138, 255, 36, 0.526);
+    white-space: nowrap;
+}
+
+.percentageBar+span{
     position: relative;
-    top: -100px;
+    top: -20px;
+    font-weight: bold;
 }

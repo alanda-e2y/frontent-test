@@ -1,6 +1,5 @@
 #searchBoxContainer{
-    margin-top: 35px;
-    margin-bottom: 35px;
+    padding-bottom: 35px;
 }
 #searchBox{
     padding: 10px 45px;
@@ -19,6 +18,8 @@
     position: relative;
     left: -45px;
     padding: 0px 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 #searchBox:focus{
