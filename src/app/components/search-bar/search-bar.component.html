@@ -1,0 +1,15 @@
+<div id="searchBoxContainer">
+    <input 
+        id="searchBox" 
+        type="search" 
+        (change)="searchTermChange($event)" 
+        (search)="doSearchEmpty()"
+        placeholder="Search for 🍺..." 
+    />
+    <button
+        id="searchButton" 
+        (click)="doSearch()"
+    >
+        🔍
+    </button>
+</div>

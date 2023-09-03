@@ -1,0 +1,27 @@
+<div 
+    fxLayout="row wrap" 
+    fxLayoutAlign="space-between"
+>
+    <div 
+        id="beer-{{beer.id}}" 
+        *ngFor="let beer of beerList" 
+        fxLayout="column" 
+    >
+        <div style="background-image: url({{beer.image_url ? beer.image_url : 'assets/beer-not-available.png'}});" class="imageContainer">
+            &nbsp;
+        </div>
+        <div fxLayoutAlign="center none" fxLayout="column" class="infoContainer">
+            <div class="beerName" fxFlex="100"> {{ beer.name }}</div>
+            <div class="percentageBar" 
+                style="--percent:{{beer.attenuation_level}}"
+            >
+                &nbsp;
+            </div>
+            <span fxFlex="100"  fxLayoutAlign="center none"> Alcohol: {{beer.attenuation_level}}% </span>
+        </div>
+    </div>
+    <div *ngIf="beerList.length == 0" fxLayout="column" fxLayoutAlign="center none">
+        <p fxFlex="100" class="beerNotFound">Sorry no Beers found. Try another search</p>
+        <div><img src="assets/cerveza-derramada.png" /></div>
+    </div>
+</div>
