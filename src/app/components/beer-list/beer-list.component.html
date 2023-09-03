@@ -20,7 +20,8 @@
             <span fxFlex="100"  fxLayoutAlign="center none"> Alcohol: {{beer.attenuation_level}}% </span>
         </div>
     </div>
-    <div *ngIf="beerList.length == 0" fxLayout="row" fxLayoutAlign="center none">
-        <p style="color: #eba300; font-size: 30px; padding: 20px">Sorry no Beers found. Try another search</p>
+    <div *ngIf="beerList.length == 0" fxLayout="column" fxLayoutAlign="center none">
+        <p fxFlex="100" class="beerNotFound">Sorry no Beers found. Try another search</p>
+        <div><img src="assets/cerveza-derramada.png" /></div>
     </div>
 </div>

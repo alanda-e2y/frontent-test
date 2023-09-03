@@ -4,9 +4,10 @@ div[id^="beer-"] {
     max-width: 300px;
     margin: 10px 20px;
     padding-bottom: 0px !important;
-    
+
     background-color: aliceblue;
 }
+
 div[id^="beer-"]:hover {
     box-shadow: 10px 5px 0px #5089a5;
 }
@@ -50,8 +51,15 @@ div[id^="beer-"] .infoContainer .beerName {
     white-space: nowrap;
 }
 
-.percentageBar+span{
+.percentageBar+span {
     position: relative;
     top: -20px;
     font-weight: bold;
+}
+
+.beerNotFound {
+    text-align: center;
+    color: aliceblue;
+    font-size: 30px;
+    padding: 20px
 }
