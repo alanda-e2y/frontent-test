@@ -1,5 +1,7 @@
 #searchBoxContainer{
     padding-bottom: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #searchBox{
     padding: 10px 45px;
@@ -8,6 +10,7 @@
     border-radius: 50px;
     border: solid 1px #ccc;
     color: #333;
+    width: 100%;
 }
 
 #searchButton {
@@ -16,8 +19,12 @@
     border: none;
     border-left: solid 1px #eee;
     position: relative;
-    left: -45px;
-    padding: 0px 10px;
+    float: right;
+    top: -36px;
+    height: 35px;
+    width: 35px;
+    padding-right: 34px;
+    padding-left: 10px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
 }

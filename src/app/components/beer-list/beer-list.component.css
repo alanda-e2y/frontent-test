@@ -1,23 +1,40 @@
 div[id^="beer-"] {
+    border: solid 2px #333;
+    min-width: 300px;
+    max-width: 300px;
+    margin: 10px 20px;
+    padding-bottom: 0px !important;
+    
+    background-color: white;
+}
+div[id^="beer-"]:hover {
+    box-shadow: 10px 5px 0px #5089a5;
+}
+
+div[id^="beer-"] .imageContainer {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    /* border: solid 2px red; */
-    height: 300px;
-    margin: 10px 0px;
-    justify-content: flex-end;
-    padding-bottom: 0px !important;
+    height: 250px;
+    margin-top: 20px;
 }
 
 div[id^="beer-"] .infoContainer {
-    color: aliceblue;
-    padding: 0px 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    max-height: 100px;
+    color: #333;
+    margin: 0px 20px;
+    overflow: hidden;
+}
+
+div[id^="beer-"] .infoContainer .beerName {
+    font-weight: bold;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px 0px;
 }
 
 .percentageBar {
-    border: solid 1px #ccc;
+    border: solid 1px #333;
     border-radius: 50px;
 }
 
@@ -28,7 +45,7 @@ div[id^="beer-"] .infoContainer {
     justify-content: end;
     width: calc(var(--percent) * 1%);
     height: 100%;
-    background: rgba(138, 255, 36, 0.526);
+    background: rgb(242 181 1);
     white-space: nowrap;
 }
 

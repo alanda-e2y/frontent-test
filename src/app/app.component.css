@@ -1,9 +1,32 @@
+header{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 h1{
     padding-top: 35px;
     margin-bottom: 0px;
     font-size: 44px;
 }
 
+h1 img{
+    height: 50px;
+    margin-right: 10px;
+}
+h1 .golden{
+    color: #eba300;
+}
+
 h5{
     margin-top: 0px;
+    font-size: 18px;
+}
+
+main{
+    padding-top: 35px;
+    background-color: #72c2e9;
+}
+
+app-beer-list{
+    max-width: 1200px;
 }

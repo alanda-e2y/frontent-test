@@ -1,6 +1,9 @@
 <header>
-    <h1 fxLayout="row" fxLayoutAlign="center none">🍻 BeerFinder </h1>
-    <h5 fxLayout="row" fxLayoutAlign="center none">Do you want a drink?</h5>
+    <h1 fxLayout="row" fxLayoutAlign="center none">
+        <img src="assets/brewery_4856689.png" alt="Logo"/> 
+        Fin<span class="golden">Beer</span>
+    </h1>
+    <h5 fxLayout="row" fxLayoutAlign="center none">Looking for a drink?</h5>
     <app-search-bar 
         (beers)="setBeers($event)">
     </app-search-bar>
@@ -12,6 +15,3 @@
     >
     </app-beer-list>
 </main>
-<footer>
-    Footer
-</footer>
