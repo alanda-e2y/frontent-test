@@ -1,12 +1,19 @@
 header{
+    text-align: center;
+    background-color: aliceblue;
+}
+header div{
     max-width: 1200px;
+    text-align: center;
     margin: 0 auto;
+    background-color: aliceblue;
 }
 
 h1{
     padding-top: 35px;
     margin-bottom: 0px;
     font-size: 44px;
+    margin-block-start: 0px;
 }
 
 h1 img{

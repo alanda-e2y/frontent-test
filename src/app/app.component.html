@@ -1,12 +1,14 @@
 <header>
-    <h1 fxLayout="row" fxLayoutAlign="center none">
-        <img src="assets/brewery_4856689.png" alt="Logo"/> 
-        Fin<span class="golden">Beer</span>
-    </h1>
-    <h5 fxLayout="row" fxLayoutAlign="center none">Looking for a drink?</h5>
-    <app-search-bar 
-        (beers)="setBeers($event)">
-    </app-search-bar>
+    <div >
+        <h1 fxLayout="row" fxLayoutAlign="center none">
+            <img src="assets/brewery_4856689.png" alt="Logo"/> 
+            Fin<span class="golden">Beer</span>
+        </h1>
+        <h5 fxLayout="row" fxLayoutAlign="center none">Looking for a drink?</h5>
+        <app-search-bar 
+            (beers)="setBeers($event)">
+        </app-search-bar>
+    </div>
 </header>
 <main fxLayout="row" fxLayoutAlign="center none">
     <app-beer-list 

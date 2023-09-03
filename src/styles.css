@@ -4,3 +4,13 @@ body {
     padding: 0px;
     margin: 0px;
 }
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+    display: block;
+    position: absolute;
+    top: 0px;
+    background-color: #72c2e9;
+}
