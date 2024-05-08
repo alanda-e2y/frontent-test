@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { PunkService } from './punk.service';
-
+import { HarryPotterService } from './harry-potter.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontent-test';
-  beers$ = this.punkService.getAllBeers();
+  title = 'frontend-challenge';
+  characters$ = this.harryPotterService.getCharacters();
 
-  constructor(public punkService: PunkService) {}
+  constructor(public harryPotterService: HarryPotterService) {}
 }

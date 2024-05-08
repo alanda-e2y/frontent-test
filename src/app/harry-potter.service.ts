@@ -4,11 +4,11 @@ import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class PunkService {
+export class HarryPotterService {
   constructor() {
   }
 
-  getAllBeers(): Observable<any[]> {
+  getCharacters(): Observable<any[]> {
     return of([]);
   }
 
