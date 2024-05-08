@@ -1,6 +1,6 @@
 # Frontend challenge
 This exercise is to create a little Angular application that calls an external API and shows the search result. 
-Use the given Punk API. Demonstrate your Angular knowledge and your frontend skills. 
+Use the given Harry Potter API. Demonstrate your Angular knowledge and your frontend skills. 
 As we are not giving any design, you are free to make it look the way you want.
 
 - Use the Harry Potter API: https://docs.potterdb.com/es
