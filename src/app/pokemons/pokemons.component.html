@@ -1,0 +1,51 @@
+<div class="search-container">
+  <div>
+    <input
+      type="text"
+      placeholder="Search for Pokémons..."
+      [(ngModel)]="searchValue"
+    />
+    <button (click)="onSearch()">Search</button>
+  </div>
+
+  @if(pokemonDetailsError$ | async; as pokemonDetailsError) {
+  <p class="error-message">Couldn't catch this one :(</p>
+  }
+</div>
+<div class="poke-grid">
+  @for (pokemon of pokemons$ | async; track pokemon.id) {
+  <a routerLink="{{ pokemon.id }}">
+    <div class="poke-card">
+      <img
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{
+          pokemon.id
+        }}.png"
+        [alt]="pokemon.name"
+      />
+      <div class="poke-card-text">{{ pokemon.name | uppercase }}</div>
+    </div>
+  </a>
+  }
+</div>
+<div class="pagination-container">
+  @if (previousSearchParams$ | async; as previousSearchParams) {
+  <button
+    (click)="
+      pokeService.getPokemons(
+        previousSearchParams.limit,
+        previousSearchParams.offset
+      )
+    "
+  >
+    Previous
+  </button>
+  } @if (nextSearchParams$ | async; as nextSearchParams) {
+  <button
+    (click)="
+      pokeService.getPokemons(nextSearchParams.limit, nextSearchParams.offset)
+    "
+  >
+    Next
+  </button>
+  }
+</div>

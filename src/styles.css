@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "VT323", monospace;
+}
+
+header {
+  padding: 16px 16px 0;
+  text-align: center;
+}
+
+main {
+  padding: 16px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+input,
+select {
+  font-family: "VT323", monospace;
+  font-size: x-large;
+  padding: 8px;
+  border: 2px solid #000;
+  outline: none;
+  width: 280px;
+}
+
+button {
+  font-family: "VT323", monospace;
+  font-size: x-large;
+  border: 2px solid #000;
+  outline: none;
+  background-color: #fff;
+  padding: 8px;
+  width: 100px;
+}
+
+button:hover {
+  background-color: #cfcfcf;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #fff;
+}
+
+select {
+  width: 100px;
+}
+
+label {
+  font-size: x-large;
+}
+
+h1 {
+  margin: 0;
+}
+
+a,
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: "VT323", monospace;
+  opacity: 1; /* Firefox */
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: "VT323", monospace;
+}
+
+input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: "VT323", monospace;
+}

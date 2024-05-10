@@ -1,0 +1,21 @@
+@if (pokemonDetails$ | async; as pokemonDetails ) {
+<div class="pokemon-details">
+  <img
+    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{
+      pokemonDetails.id
+    }}.png"
+    [alt]="pokemonDetails.name"
+    height="300"
+  />
+  <div class="pokemon-details-stats">
+    <h1 class="name">{{ pokemonDetails.name | uppercase }}</h1>
+    <span class="height">Height: {{ pokemonDetails.height }}</span>
+    <span class="weight">Weight: {{ pokemonDetails.weight }}</span>
+    <span class="xp">XP: {{ pokemonDetails.base_experience }}</span>
+  </div>
+</div>
+}
+
+<div class="back-button-container">
+  <Button class="back-button" (click)="onGoBack()">Go Back</Button>
+</div>

@@ -1,0 +1,17 @@
+.pokemon-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 36px;
+}
+
+.pokemon-details-stats {
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+}
+
+.back-button-container {
+  display: flex;
+  justify-content: center;
+}
