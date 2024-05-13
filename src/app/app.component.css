@@ -1,0 +1,41 @@
+.h2 {
+  text-align: center;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 1%;
+  display: flex;
+  flex-wrap: wrap; /* This allows the items in the row to wrap into new lines */
+}
+
+.card-img-top {
+  width: 100%; /* Ensures the image scales with the card */
+  min-height: 320px; /* Maintains the aspect ratio */
+  max-height: 320px;
+  object-fit: cover; /* Ensures the image covers the designated area without distortion */
+  transform: scale(0.8); /* Reduces the size to 80% of its original */
+  margin: auto; /* Centers the scaled image in the card */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+  
+.card-body {
+  flex: 1; /* Allows the body to expand to fill space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Helps align the button at the bottom */
+}
+  
+.mb-4 {
+  margin-bottom: 1.5rem; /* Adds bottom margin for spacing between rows */
+  width: 15%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+

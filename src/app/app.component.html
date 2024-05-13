@@ -1,1 +1,26 @@
-<p>characters: {{ characters$ | async | json }}</p>
+<div class="container">
+  <div class="col-md" style="text-align: -webkit-center;">
+    <h2 class="h2">Harry Potter Characters</h2>
+    <div class="mb-3 d-flex align-items-center" style="width: 60%;">
+      <button class="btn btn-warning mr-2" (click)="clear()">Clear</button>
+      <input type="text" class="form-control mr-2" [(ngModel)]="searchQuery" placeholder="Search characters" (keyup.enter)="onSearch()" style="width: auto;  margin: 1%; flex-grow: 1;">
+      <button class="btn btn-primary" (click)="onSearch()">Search</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let character of characters$ | async | slice:0:100; let i = index">
+      <div class="card h-100">
+        <img [src]="character.attributes.image || '/assets/image/default.jpg'" class="card-img-top" alt="{{ character.attributes.name }}">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ character.attributes.name }}</h5>
+          <p class="card-text">House: {{ character.attributes.house || 'unknown'}}</p>
+          <div class="collapse" [id]="'collapse' + i">
+            <div class="card card-body">
+              <a href="{{ character.attributes.wiki }}" target="_blank">More Informations</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
